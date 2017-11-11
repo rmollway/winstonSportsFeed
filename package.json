@@ -1,5 +1,5 @@
 {
-  "name": "Winstons Sports Server",
+  "name": "WinstonSportsServer",
   "version": "1.0.0",
   "description": "Provides sports data for Winston",
   "main": "server.js",
