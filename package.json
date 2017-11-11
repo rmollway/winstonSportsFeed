@@ -12,6 +12,9 @@
     "morgan": "^1.6.1",
     "request": "^2.67.0"
   },
+  "scripts": {
+    "start": "node server.js"
+  },
   "devDependencies": {
     "should": "^7.1.1",
     "supertest": "^1.1.0"
