@@ -76,8 +76,9 @@ exports.weather = function(req, res) {
 
     var now = new Date();
     var diff = parseInt(now.getUnixTime()) - parseInt(latestWeatherUpdate.updateTime);
+    console.log('Diff: ' + diff);
 
-    if(diff > 3600)
+    if(diff > 180)
     {
       console.log('New Weather Requested');
       request.get({url: weatherOpts.path}, function(error, response, body) {
