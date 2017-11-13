@@ -40,6 +40,132 @@ exports.latestGame = function(req, res) {
     else {
       otherTeam = latestGame.game.homeTeam.Abbreviation;
     }
+
+    var otherTeamValue;
+    switch(otherTeam) {
+      case "TBL":
+        otherTeamValue = "a";
+        break;
+
+      case "DET":
+        otherTeamValue = "b";
+        break;
+
+      case "ANA":
+        otherTeamValue = "c";
+        break;
+
+      case "ARI":
+        otherTeamValue = "d";
+        break;
+
+      case "BOS":
+        otherTeamValue = "e";
+        break;
+
+      case "BUF":
+        otherTeamValue = "f";
+        break;
+
+      case "CGY":
+        otherTeamValue = "g";
+        break;
+
+      case "CAR":
+        otherTeamValue = "h";
+        break;
+
+      case "COL":
+        otherTeamValue = "i";
+        break;
+
+      case "CBJ":
+        otherTeamValue = "j";
+        break;
+
+      case "DAL":
+        otherTeamValue = "k";
+        break;
+
+      case "WPG":
+        otherTeamValue = "l";
+        break;
+
+      case "EDM":
+        otherTeamValue = "m";
+        break;
+
+      case "FLA":
+        otherTeamValue = "n";
+        break;
+
+      case "LAK":
+        otherTeamValue = "o";
+        break;
+
+      case "MIN":
+        otherTeamValue = "p";
+        break;
+
+      case "MTL":
+        otherTeamValue = "q";
+        break;
+
+      case "NSH":
+        otherTeamValue = "r";
+        break;
+
+      case "NJD":
+        otherTeamValue = "s";
+        break;
+
+      case "NYI":
+        otherTeamValue = "t";
+        break;
+
+      case "NYR":
+        otherTeamValue = "u";
+        break;
+
+      case "OTT":
+        otherTeamValue = "v";
+        break;
+
+      case "PHI":
+        otherTeamValue = "w";
+        break;
+
+      case "PIT":
+        otherTeamValue = "x";
+        break;
+
+      case "SJS":
+        otherTeamValue = "y";
+        break;
+
+      case "STL":
+        otherTeamValue = "z";
+        break;
+
+      case "WSH":
+        otherTeamValue = "{";
+        break;
+
+      case "TOR":
+        otherTeamValue = "|";
+        break;
+
+      case "VAN":
+        otherTeamValue = "`";
+        break;
+
+      case "VGK":
+        otherTeamValue = "~";
+        break;
+    }
+
+
+
     var chiScore = latestGame.stats.GoalsFor;
     var otherScore = latestGame.stats.GoalsAgainst;
 
@@ -58,7 +184,7 @@ exports.latestGame = function(req, res) {
     tempOppScore = parseInt(tempOppScore.replace(/"/g,""));
 
     var ret = {
-      'opponent': otherTeam,
+      'opponent': otherTeamValue,
       'chi': tempChiScore,
       'opp': tempOppScore
     };
