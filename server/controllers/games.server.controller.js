@@ -220,7 +220,8 @@ exports.weather = function(req, res) {
         switch(condition) {
           case "Drizzle":
           case "Rain":
-            condition = "Rain";
+            // condition = "Rain";
+            condition = "S";
             break;
 
           case "Snow":
@@ -245,7 +246,8 @@ exports.weather = function(req, res) {
           case "Blowing Snow":
           case "Blowing Widespread Dust":
           case "Blowing Sand":
-            condition = "Overcast";
+            // condition = "Overcast";
+            condition = "R";
             break;
 
           case "Rain Mist":
@@ -255,7 +257,8 @@ exports.weather = function(req, res) {
           case "Ice Pellet Showers":
           case "Hail Showers":
           case "Small Hail Showers":
-            condition = "Rain";
+            // condition = "Rain";
+            condition = "S";
             break;
 
           case "Thunderstorm":
@@ -264,12 +267,14 @@ exports.weather = function(req, res) {
           case "Thunderstorms and Ice Pellets":
           case "Thunderstorms with Hail":
           case "Thunderstorms with Small Hail":
-            condition = "Scattered Thunderstorms";
+            // condition = "Scattered Thunderstorms";
+            condition = "T";
             break;
 
           case "Freezing Drizzle":
           case "Freezing Rain":
-            condition = "Rain";
+            // condition = "Rain";
+            condition = "S";
             break;
 
           case "Freezing Fog":
@@ -277,31 +282,38 @@ exports.weather = function(req, res) {
           case "Shallow Fog":
           case "Partial Fog":
           case "Overcast":
-            condition = "Overcast";
+            // condition = "Overcast";
+            condition = "R";
             break;
 
           case "Clear":
-            condition = "Sunny";
+            // condition = "Sunny";
+            condition = "P";
+            break;
 
           case "Partly Cloudy":
           case "Mostly Cloudy":
           case "Scattered Clouds":
-            condition = "Partly Cloudy";
+            // condition = "Partly Cloudy";
+            condition = "Q";
             break;
 
           case "Small Hail":
           case "Squalls":
-            condition = "Rain";
+            // condition = "Rain";
+            condition = "S";
             break;
 
           case "Funnel Cloud":
           case "Unknown Precipitation":
           case "Unknown":
-            condition = "Partly Cloudy";
+            // condition = "Partly Cloudy";
+            condition = "Q";
             break;
 
           default:
-            condition = "Partly Cloudy";
+            // condition = "Partly Cloudy";
+            condition = "Q";
             break;
         }
 
