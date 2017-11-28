@@ -87,7 +87,7 @@ exports.latestGame = function(req, res) {
         otherTeamValue = "k";
         break;
 
-      case "WPG":
+      case "WPJ":
         otherTeamValue = "l";
         break;
 
@@ -95,7 +95,7 @@ exports.latestGame = function(req, res) {
         otherTeamValue = "m";
         break;
 
-      case "FLA":
+      case "FLO":
         otherTeamValue = "n";
         break;
 
@@ -162,6 +162,10 @@ exports.latestGame = function(req, res) {
       case "VGK":
         otherTeamValue = "~";
         break;
+
+      default:
+        otherTeamValue = "m"; // arbitrarily chose edmonton
+        break;
     }
 
 
@@ -204,6 +208,7 @@ exports.weather = function(req, res) {
     var diff = parseInt(now.getUnixTime()) - parseInt(latestWeatherUpdate.updateTime);
     console.log('Diff: ' + diff);
 
+    // api allows 1000 requests per day, equates to approximately 3 minutes between requests
     if(diff > 180)
     {
       console.log('New Weather Requested');
